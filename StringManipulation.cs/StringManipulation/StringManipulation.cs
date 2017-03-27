@@ -12,7 +12,7 @@ namespace StringManipulation
         {
             // Write a program which accepts two strings. 
             // The program should do the following: 
-            Console.WriteLine("Please inter a sentence");
+            Console.WriteLine("Please enter a sentence");
             string sentence = Console.ReadLine();
 
             // print and display the total number of occurrences of a or A
@@ -50,36 +50,31 @@ namespace StringManipulation
             Console.ReadKey();
 
 
-
-
-
-
-
-
-            sentence += " welcome";
-            sentence += "to ";
-            sentence += "Dot Net";
-
-            Console.WriteLine(sentence);
-
-            
-
-
-            
-            char theA;
-            
-
-            
-
-
-            
             // convert both the strings to upper case 
-            // concatenate the two strings and display the result 
-            // declare one variable of type StringBuilder 
-            // perform operations like Append(), Insert(), Remove(), Replace().
+            string upsentence= sentence.ToUpper();
+            Console.WriteLine(upsentence);
+            Console.ReadKey();
 
-            StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
+            // concatenate the two strings and display the result 
+
+            Console.WriteLine(sentence + sentence);
+            Console.ReadKey();
+
+
+            // declare one variable of type StringBuilder 
+
+
+            // perform operations like Append(), Insert(), Remove(), Replace().
+            
+
+            StringBuilder MyStringBuilder = new StringBuilder(sentence);
             MyStringBuilder.Append(" What a beautiful day.");
+            Console.WriteLine(MyStringBuilder);
+            MyStringBuilder.Insert(12, " Beautiful ");
+            Console.WriteLine(MyStringBuilder);
+            MyStringBuilder.Remove(12 , 11);
+            Console.WriteLine(MyStringBuilder);
+            MyStringBuilder.Replace('m', '#');
             Console.WriteLine(MyStringBuilder);
             Console.ReadKey();
         }
