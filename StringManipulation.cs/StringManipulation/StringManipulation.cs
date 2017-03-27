@@ -15,21 +15,45 @@ namespace StringManipulation
             Console.WriteLine("Please inter a sentence");
             string sentence = Console.ReadLine();
 
+            // print and display the total number of occurrences of a or A
+            int anOccurancea = 0;
+           
             for (int counter = 0; counter < sentence.Length; counter++)
             {
-                int anOccurancea = 0;
+                
 
-                foreach (char newMine in sentence[counter].ToString())
+                if (sentence[counter].ToString() == "a")
                 {
-
+                   
                     anOccurancea = anOccurancea + 1;
 
-                    Console.WriteLine(anOccurancea);
+                    
+                   
                 }
-
-                    Console.WriteLine(sentence[counter].ToString());
+                if (sentence[counter].ToString() == "A")
+                {
+                    anOccurancea = anOccurancea + 1;
+                    
+                }
+                
             }
-            
+            Console.WriteLine(anOccurancea);
+
+
+
+            Console.ReadKey();
+
+            // replace every occurrence of „a‟ or „A‟ with @
+            string newSentence = sentence.Replace('a', '@');
+            string newSentence2 = newSentence.Replace('A', '@');
+            Console.WriteLine(newSentence2);
+            Console.ReadKey();
+
+
+
+
+
+
 
 
             sentence += " welcome";
@@ -41,15 +65,14 @@ namespace StringManipulation
             
 
 
-
-            // print and display the total number of occurrences of a or A
+            
             char theA;
             
 
             
 
 
-            // replace every occurrence of „a‟ or „A‟ with @ 
+            
             // convert both the strings to upper case 
             // concatenate the two strings and display the result 
             // declare one variable of type StringBuilder 
